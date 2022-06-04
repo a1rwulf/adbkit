@@ -44,4 +44,19 @@ describe('WaitForDeviceCommand', function () {
             expect(err.message).to.contain('not sure how this might happen');
         });
     });
+
+    // it('gets stuck because of a bug in android 11', function () {
+    //     const conn = new MockConnection();
+    //     const cmd = new WaitForDeviceCommand(conn);
+    //     setImmediate(function () {
+    //         conn.getSocket().causeRead(Protocol.OKAY);
+    //     });
+    //     return cmd.execute('abba').then(function (id) {
+    //         expect(id).to.equal('abba');
+    //     })
+    //     .catch(function (err) {
+    //         expect(err.message).to.contain('not sure how this might happen');
+    //     });
+    // });
+
 });
