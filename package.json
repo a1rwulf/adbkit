@@ -39,6 +39,7 @@
     "clean": "rimraf dist index.d.ts index.js",
     "keycode": "node tasks/keycode.js",
     "prepublish": "npm run clean && npm run compile && npm run test",
+    "postinstall": "npm run clean && npm run compile && npm run test",
     "compile": "tsc  -p .",
     "compile2": "tsc -p tsconfig-dist.json",
     "lint": "eslint   ./ --ext .ts",
